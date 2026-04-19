@@ -5,6 +5,6 @@ class ProxyPagamento:
 
     def processar(self, valor):
         if self.autenticado:
-            self.pagamento_real.processar(valor)
+            self.pagamento.processar(valor)
         else:
             print("Acesso negado. Usuário não autenticado.")

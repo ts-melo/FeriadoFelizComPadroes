@@ -30,5 +30,8 @@ class SistemaCheckout:
         final = ProxyPagamento(pagamento_seguro, user)
 
         final.processar(valor)
-        MonitorVendas().notificar(f"Venda realizada: {tipo} - R${valor:.2f}")
+
+        monitor = MonitorVendas()
+        monitor.notificar(f"Venda realizada: {tipo} - R${valor:.2f}")
+        monitor.notificar(f"Venda realizada: {tipo} - R${valor:.2f}")
     

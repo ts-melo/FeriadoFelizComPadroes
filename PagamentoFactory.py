@@ -13,6 +13,7 @@ class PagamentoDinheiro:
 class PagamentoFactory:
     @staticmethod
     def criar_pagamento(tipo):
+        tipo = tipo.upper()
         if tipo == "PIX":
             return PagamentoPix()
         elif tipo == "CARTAO":
